@@ -1,0 +1,609 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B0F94598288EAA8900E57C26 /* soteriaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F94597288EAA8900E57C26 /* soteriaApp.swift */; };
+		B0F9459A288EAA8900E57C26 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F94599288EAA8900E57C26 /* ContentView.swift */; };
+		B0F9459C288EAA8A00E57C26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0F9459B288EAA8A00E57C26 /* Assets.xcassets */; };
+		B0F9459F288EAA8A00E57C26 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0F9459E288EAA8A00E57C26 /* Preview Assets.xcassets */; };
+		B0F945A1288EAA8A00E57C26 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F945A0288EAA8A00E57C26 /* Persistence.swift */; };
+		B0F945A4288EAA8A00E57C26 /* soteria.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B0F945A2288EAA8A00E57C26 /* soteria.xcdatamodeld */; };
+		B0F945AE288EAA8A00E57C26 /* soteriaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F945AD288EAA8A00E57C26 /* soteriaTests.swift */; };
+		B0F945B8288EAA8A00E57C26 /* soteriaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F945B7288EAA8A00E57C26 /* soteriaUITests.swift */; };
+		B0F945BA288EAA8A00E57C26 /* soteriaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F945B9288EAA8A00E57C26 /* soteriaUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B0F945AA288EAA8A00E57C26 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B0F9458C288EAA8900E57C26 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B0F94593288EAA8900E57C26;
+			remoteInfo = soteria;
+		};
+		B0F945B4288EAA8A00E57C26 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B0F9458C288EAA8900E57C26 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B0F94593288EAA8900E57C26;
+			remoteInfo = soteria;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B0F94594288EAA8900E57C26 /* soteria.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = soteria.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0F94597288EAA8900E57C26 /* soteriaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = soteriaApp.swift; sourceTree = "<group>"; };
+		B0F94599288EAA8900E57C26 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B0F9459B288EAA8A00E57C26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B0F9459E288EAA8A00E57C26 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B0F945A0288EAA8A00E57C26 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		B0F945A3288EAA8A00E57C26 /* soteria.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = soteria.xcdatamodel; sourceTree = "<group>"; };
+		B0F945A9288EAA8A00E57C26 /* soteriaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = soteriaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0F945AD288EAA8A00E57C26 /* soteriaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = soteriaTests.swift; sourceTree = "<group>"; };
+		B0F945B3288EAA8A00E57C26 /* soteriaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = soteriaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0F945B7288EAA8A00E57C26 /* soteriaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = soteriaUITests.swift; sourceTree = "<group>"; };
+		B0F945B9288EAA8A00E57C26 /* soteriaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = soteriaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B0F94591288EAA8900E57C26 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0F945A6288EAA8A00E57C26 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0F945B0288EAA8A00E57C26 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B0F9458B288EAA8900E57C26 = {
+			isa = PBXGroup;
+			children = (
+				B0F94596288EAA8900E57C26 /* soteria */,
+				B0F945AC288EAA8A00E57C26 /* soteriaTests */,
+				B0F945B6288EAA8A00E57C26 /* soteriaUITests */,
+				B0F94595288EAA8900E57C26 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B0F94595288EAA8900E57C26 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B0F94594288EAA8900E57C26 /* soteria.app */,
+				B0F945A9288EAA8A00E57C26 /* soteriaTests.xctest */,
+				B0F945B3288EAA8A00E57C26 /* soteriaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B0F94596288EAA8900E57C26 /* soteria */ = {
+			isa = PBXGroup;
+			children = (
+				B0F94597288EAA8900E57C26 /* soteriaApp.swift */,
+				B0F94599288EAA8900E57C26 /* ContentView.swift */,
+				B0F9459B288EAA8A00E57C26 /* Assets.xcassets */,
+				B0F945A0288EAA8A00E57C26 /* Persistence.swift */,
+				B0F945A2288EAA8A00E57C26 /* soteria.xcdatamodeld */,
+				B0F9459D288EAA8A00E57C26 /* Preview Content */,
+			);
+			path = soteria;
+			sourceTree = "<group>";
+		};
+		B0F9459D288EAA8A00E57C26 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				B0F9459E288EAA8A00E57C26 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B0F945AC288EAA8A00E57C26 /* soteriaTests */ = {
+			isa = PBXGroup;
+			children = (
+				B0F945AD288EAA8A00E57C26 /* soteriaTests.swift */,
+			);
+			path = soteriaTests;
+			sourceTree = "<group>";
+		};
+		B0F945B6288EAA8A00E57C26 /* soteriaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B0F945B7288EAA8A00E57C26 /* soteriaUITests.swift */,
+				B0F945B9288EAA8A00E57C26 /* soteriaUITestsLaunchTests.swift */,
+			);
+			path = soteriaUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B0F94593288EAA8900E57C26 /* soteria */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B0F945BD288EAA8A00E57C26 /* Build configuration list for PBXNativeTarget "soteria" */;
+			buildPhases = (
+				B0F94590288EAA8900E57C26 /* Sources */,
+				B0F94591288EAA8900E57C26 /* Frameworks */,
+				B0F94592288EAA8900E57C26 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = soteria;
+			productName = soteria;
+			productReference = B0F94594288EAA8900E57C26 /* soteria.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B0F945A8288EAA8A00E57C26 /* soteriaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B0F945C0288EAA8A00E57C26 /* Build configuration list for PBXNativeTarget "soteriaTests" */;
+			buildPhases = (
+				B0F945A5288EAA8A00E57C26 /* Sources */,
+				B0F945A6288EAA8A00E57C26 /* Frameworks */,
+				B0F945A7288EAA8A00E57C26 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B0F945AB288EAA8A00E57C26 /* PBXTargetDependency */,
+			);
+			name = soteriaTests;
+			productName = soteriaTests;
+			productReference = B0F945A9288EAA8A00E57C26 /* soteriaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B0F945B2288EAA8A00E57C26 /* soteriaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B0F945C3288EAA8A00E57C26 /* Build configuration list for PBXNativeTarget "soteriaUITests" */;
+			buildPhases = (
+				B0F945AF288EAA8A00E57C26 /* Sources */,
+				B0F945B0288EAA8A00E57C26 /* Frameworks */,
+				B0F945B1288EAA8A00E57C26 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B0F945B5288EAA8A00E57C26 /* PBXTargetDependency */,
+			);
+			name = soteriaUITests;
+			productName = soteriaUITests;
+			productReference = B0F945B3288EAA8A00E57C26 /* soteriaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B0F9458C288EAA8900E57C26 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					B0F94593288EAA8900E57C26 = {
+						CreatedOnToolsVersion = 13.3;
+					};
+					B0F945A8288EAA8A00E57C26 = {
+						CreatedOnToolsVersion = 13.3;
+						TestTargetID = B0F94593288EAA8900E57C26;
+					};
+					B0F945B2288EAA8A00E57C26 = {
+						CreatedOnToolsVersion = 13.3;
+						TestTargetID = B0F94593288EAA8900E57C26;
+					};
+				};
+			};
+			buildConfigurationList = B0F9458F288EAA8900E57C26 /* Build configuration list for PBXProject "soteria" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B0F9458B288EAA8900E57C26;
+			productRefGroup = B0F94595288EAA8900E57C26 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B0F94593288EAA8900E57C26 /* soteria */,
+				B0F945A8288EAA8A00E57C26 /* soteriaTests */,
+				B0F945B2288EAA8A00E57C26 /* soteriaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B0F94592288EAA8900E57C26 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0F9459F288EAA8A00E57C26 /* Preview Assets.xcassets in Resources */,
+				B0F9459C288EAA8A00E57C26 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0F945A7288EAA8A00E57C26 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0F945B1288EAA8A00E57C26 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B0F94590288EAA8900E57C26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0F945A1288EAA8A00E57C26 /* Persistence.swift in Sources */,
+				B0F9459A288EAA8900E57C26 /* ContentView.swift in Sources */,
+				B0F94598288EAA8900E57C26 /* soteriaApp.swift in Sources */,
+				B0F945A4288EAA8A00E57C26 /* soteria.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0F945A5288EAA8A00E57C26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0F945AE288EAA8A00E57C26 /* soteriaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0F945AF288EAA8A00E57C26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0F945BA288EAA8A00E57C26 /* soteriaUITestsLaunchTests.swift in Sources */,
+				B0F945B8288EAA8A00E57C26 /* soteriaUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B0F945AB288EAA8A00E57C26 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B0F94593288EAA8900E57C26 /* soteria */;
+			targetProxy = B0F945AA288EAA8A00E57C26 /* PBXContainerItemProxy */;
+		};
+		B0F945B5288EAA8A00E57C26 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B0F94593288EAA8900E57C26 /* soteria */;
+			targetProxy = B0F945B4288EAA8A00E57C26 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		B0F945BB288EAA8A00E57C26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B0F945BC288EAA8A00E57C26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B0F945BE288EAA8A00E57C26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"soteria/Preview Content\"";
+				DEVELOPMENT_TEAM = MMBFGFQP35;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.melvinliu.soteria;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B0F945BF288EAA8A00E57C26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"soteria/Preview Content\"";
+				DEVELOPMENT_TEAM = MMBFGFQP35;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.melvinliu.soteria;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B0F945C1288EAA8A00E57C26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MMBFGFQP35;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.melvinliu.soteriaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/soteria.app/soteria";
+			};
+			name = Debug;
+		};
+		B0F945C2288EAA8A00E57C26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MMBFGFQP35;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.melvinliu.soteriaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/soteria.app/soteria";
+			};
+			name = Release;
+		};
+		B0F945C4288EAA8A00E57C26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MMBFGFQP35;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.melvinliu.soteriaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = soteria;
+			};
+			name = Debug;
+		};
+		B0F945C5288EAA8A00E57C26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MMBFGFQP35;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.melvinliu.soteriaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = soteria;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B0F9458F288EAA8900E57C26 /* Build configuration list for PBXProject "soteria" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0F945BB288EAA8A00E57C26 /* Debug */,
+				B0F945BC288EAA8A00E57C26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B0F945BD288EAA8A00E57C26 /* Build configuration list for PBXNativeTarget "soteria" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0F945BE288EAA8A00E57C26 /* Debug */,
+				B0F945BF288EAA8A00E57C26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B0F945C0288EAA8A00E57C26 /* Build configuration list for PBXNativeTarget "soteriaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0F945C1288EAA8A00E57C26 /* Debug */,
+				B0F945C2288EAA8A00E57C26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B0F945C3288EAA8A00E57C26 /* Build configuration list for PBXNativeTarget "soteriaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0F945C4288EAA8A00E57C26 /* Debug */,
+				B0F945C5288EAA8A00E57C26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B0F945A2288EAA8A00E57C26 /* soteria.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B0F945A3288EAA8A00E57C26 /* soteria.xcdatamodel */,
+			);
+			currentVersion = B0F945A3288EAA8A00E57C26 /* soteria.xcdatamodel */;
+			path = soteria.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = B0F9458C288EAA8900E57C26 /* Project object */;
+}
