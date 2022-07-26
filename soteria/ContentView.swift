@@ -6,15 +6,26 @@
 //
 
 import SwiftUI
-import CoreLocation
 
 struct HomeView: View {
     @State private var showingAlert = false
+    @ObservedObject var locationManager = LocationManager()
+
+        var userLatitude: String {
+            return "\(String(describing: locationManager.lastLocation?.coordinate.latitude))"
+        }
+
+        var userLongitude: String {
+            return "\(String(describing: locationManager.lastLocation?.coordinate.longitude))"
+        }
     
     func sendAlert() {
+        print("test")
+        print(userLatitude);
+        print(userLongitude);
         let phoneNumber = UserDefaults.standard.string(forKey: "phoneNumber") ?? "0"
         
-        if(phoneNumber == "0")
+        if (phoneNumber == "0")
         {
             showingAlert = !showingAlert
         }
@@ -129,7 +140,7 @@ struct ContentView: View {
         sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
         animation: .default)
     private var items: FetchedResults<Item>
-
+    
     var body: some View {
         TabView {
             HomeView()

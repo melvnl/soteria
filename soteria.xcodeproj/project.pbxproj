@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B06E5C862890723F0082EF54 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06E5C852890723F0082EF54 /* LocationManager.swift */; };
 		B0F94598288EAA8900E57C26 /* soteriaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F94597288EAA8900E57C26 /* soteriaApp.swift */; };
 		B0F9459A288EAA8900E57C26 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F94599288EAA8900E57C26 /* ContentView.swift */; };
 		B0F9459C288EAA8A00E57C26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0F9459B288EAA8A00E57C26 /* Assets.xcassets */; };
@@ -36,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B06E5C852890723F0082EF54 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		B06E5C87289076610082EF54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		B0F94594288EAA8900E57C26 /* soteria.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = soteria.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0F94597288EAA8900E57C26 /* soteriaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = soteriaApp.swift; sourceTree = "<group>"; };
 		B0F94599288EAA8900E57C26 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -98,12 +101,14 @@
 		B0F94596288EAA8900E57C26 /* soteria */ = {
 			isa = PBXGroup;
 			children = (
+				B06E5C87289076610082EF54 /* Info.plist */,
 				B0F94597288EAA8900E57C26 /* soteriaApp.swift */,
 				B0F94599288EAA8900E57C26 /* ContentView.swift */,
 				B0F9459B288EAA8A00E57C26 /* Assets.xcassets */,
 				B0F945A0288EAA8A00E57C26 /* Persistence.swift */,
 				B0F945A2288EAA8A00E57C26 /* soteria.xcdatamodeld */,
 				B0F9459D288EAA8A00E57C26 /* Preview Content */,
+				B06E5C852890723F0082EF54 /* LocationManager.swift */,
 			);
 			path = soteria;
 			sourceTree = "<group>";
@@ -265,6 +270,7 @@
 			files = (
 				B0F945A1288EAA8A00E57C26 /* Persistence.swift in Sources */,
 				B0F9459A288EAA8900E57C26 /* ContentView.swift in Sources */,
+				B06E5C862890723F0082EF54 /* LocationManager.swift in Sources */,
 				B0F94598288EAA8900E57C26 /* soteriaApp.swift in Sources */,
 				B0F945A4288EAA8A00E57C26 /* soteria.xcdatamodeld in Sources */,
 			);
@@ -428,6 +434,8 @@
 				DEVELOPMENT_TEAM = MMBFGFQP35;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = soteria/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Please allow us to access your location";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -457,6 +465,8 @@
 				DEVELOPMENT_TEAM = MMBFGFQP35;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = soteria/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Please allow us to access your location";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
