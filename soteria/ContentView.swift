@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CoreLocation
 
 struct HomeView: View {
     @State private var showingAlert = false
@@ -30,7 +31,7 @@ struct HomeView: View {
             showingAlert = !showingAlert
         }
         else{
-            if let url = URL(string: "https://api.whatsapp.com/send/?phone=\( phoneNumber)&text=Help!%20Sender%20Sedang%20Dalam%20Masalah!&type=phone_number&app_absent=0"),
+            if let url = URL(string: "https://api.whatsapp.com/send/?phone=\( phoneNumber)&text=Help!%20Sender%20Sedang%20Dalam%20Masalah!%20Koordinate%20di%20lat:\(userLatitude)%20long:\(userLongitude)&type=phone_number&app_absent=0"),
                     
                     UIApplication.shared.canOpenURL(url) {
                        UIApplication.shared.open(url, options: [:])
