@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import CoreData
+import CoreLocation
 
 struct HomeView: View {
     @State private var showingAlert = false
@@ -75,6 +75,7 @@ struct ContactView: View {
             showingAlert = !showingAlert
         }
         else{
+            print("lol")
             UserDefaults.standard.set(destinationNumber, forKey: "phoneNumber")
              }
         }
@@ -112,8 +113,8 @@ struct ContactView: View {
                     }
                     )
                     .alert(isPresented: $showingAlert) {
-                                Alert(title: Text("Input Phone Number"), message: Text("Input your destinated phone number and tap Save button"), dismissButton: .default(Text("Close")))
-                            }
+                                Alert(title: Text("Input Phone Number"), message: Text("Input your destinated Phone Number and tap Save button"), dismissButton: .default(Text("Close")))
+                            } 
                 }
             }
             
