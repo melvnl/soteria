@@ -7,36 +7,95 @@
 
 import SwiftUI
 import CoreLocation
+import MapKit
 
 struct HomeView: View {
     @State private var showingAlert = false
     @ObservedObject var locationManager = LocationManager()
 
-        var userLatitude: String {
-            return "\(String(describing: locationManager.lastLocation?.coordinate.latitude))"
-        }
+    var userLatitude: Double {
+        return  locationManager.lastLocation?.coordinate.latitude ?? 0
+    }
 
-        var userLongitude: String {
-            return "\(String(describing: locationManager.lastLocation?.coordinate.longitude))"
-        }
+    var userLongitude: Double {
+        return  locationManager.lastLocation?.coordinate.longitude ?? 0
+    }
+    
+    typealias CompletionHandler = (_ success: Bool, _ addressString:String) -> Void
+    
+    func getAddressFromLatLon(Latitude: Double, Longitude: Double, completionHandler: @escaping CompletionHandler) {
+        var center : CLLocationCoordinate2D = CLLocationCoordinate2D()
+
+        let ceo: CLGeocoder = CLGeocoder()
+        center.latitude = Latitude
+        center.longitude = Longitude
+
+        let loc: CLLocation = CLLocation(latitude:center.latitude, longitude: center.longitude)
+
+        ceo.reverseGeocodeLocation(loc, completionHandler:
+            {(placemarks, error) in
+                if (error != nil)
+                {
+                    print("reverse geodcode fail: \(error!.localizedDescription)")
+                }
+                let pm = placemarks! as [CLPlacemark]
+
+                if pm.count > 0 {
+                    let pm = placemarks![0]
+                    var addressString : String = ""
+                    if pm.subLocality != nil {
+                        addressString = addressString + pm.subLocality! + ", "
+                    }
+                    if pm.thoroughfare != nil {
+                        addressString = addressString + pm.thoroughfare! + ", "
+                    }
+                    if pm.locality != nil {
+                        addressString = addressString + pm.locality! + ", "
+                    }
+                    if pm.country != nil {
+                        addressString = addressString + pm.country! + ", "
+                    }
+                    if pm.postalCode != nil {
+                        addressString = addressString + pm.postalCode! + " "
+                    }
+                    
+                    completionHandler(true, addressString)
+              }
+        })
+    }
     
     func sendAlert() {
-        print("test")
-        print(userLatitude);
-        print(userLongitude);
-        let phoneNumber = UserDefaults.standard.string(forKey: "phoneNumber") ?? "0"
         
-        if (phoneNumber == "0")
-        {
-            showingAlert = !showingAlert
-        }
-        else{
-            if let url = URL(string: "https://api.whatsapp.com/send/?phone=\( phoneNumber)&text=Help!%20Sender%20Sedang%20Dalam%20Masalah!%20Koordinate%20di%20lat:\(userLatitude)%20long:\(userLongitude)&type=phone_number&app_absent=0"),
+        var userAddress = ""
+        
+        getAddressFromLatLon(Latitude: userLatitude, Longitude: userLongitude){ (success, addressString) in
+            if success {
+                print("get address called")
+                print(addressString)
+                //once address is fetched, this will be triggered.
+                let phoneNumber = UserDefaults.standard.string(forKey: "phoneNumber") ?? "0"
+                
+                if (phoneNumber == "0")
+                {
+                    showingAlert = !showingAlert
+                }
+                
+                else{
+                    print("called")
+                    print(addressString)
                     
-                    UIApplication.shared.canOpenURL(url) {
-                       UIApplication.shared.open(url, options: [:])
-                    }
+                    let targetAddress = addressString.replacingOccurrences(of: " ", with: "%20")
+                    
+                    if let url = URL(string: "https://api.whatsapp.com/send/?phone=\( phoneNumber)&text=Help!%20Sender%20Sedang%20Dalam%20Masalah!%20Koordinate%20di%20lat:\(userLatitude)%20long:\(userLongitude)%20Alamat%20di%20\(targetAddress)&type=phone_number&app_absent=0"),
+                            
+                            UIApplication.shared.canOpenURL(url) {
+                               UIApplication.shared.open(url, options: [:])
+                            }
+                }
+            }
         }
+             
+        
     }
     
     var body: some View {
@@ -82,11 +141,11 @@ struct ContactView: View {
     
     func saveData() {
         
-        if(destinationNumber == "")
+        if (destinationNumber == "")
         {
             showingAlert = !showingAlert
         }
-        else{
+        else {
             print("lol")
             UserDefaults.standard.set(destinationNumber, forKey: "phoneNumber")
              }
@@ -95,7 +154,6 @@ struct ContactView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                
                 VStack {
                     Text(heading)
                         .font(.system(size: 36, weight: .bold, design: .default))
