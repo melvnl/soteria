@@ -1,3 +1,5 @@
+![soteria_thumb](https://user-images.githubusercontent.com/63998835/181581281-f567c518-4a86-4606-b5bf-deddaa9be1ad.png)
+
 # Overview
 
 Inspired from Netflix series "How to Sell Drugs Online Fast" scene where Moritz threaten a drug dealer with this app that he claim "will notify/alert all his facebook contact" with a single button click. I create Soteria inspired from that scene. Soteria will automatically send an alert message that contains your whereabout (latitude, longitude, and address from reverse geocode).
