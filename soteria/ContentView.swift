@@ -133,7 +133,7 @@ struct ContactView: View {
     @State private var showingAlert = false
     
     var heading = "Enter Destinated WhatsApp Number"
-    var desc = "Tap button to send alert message and your current location to destinated email"
+    var desc = "Tap button to send alert message and your current location to destinated number"
     var placeholder = "ex: 6281908816833"
     var callToActionText = "Save"
     
