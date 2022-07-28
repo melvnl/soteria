@@ -66,8 +66,6 @@ struct HomeView: View {
     
     func sendAlert() {
         
-        var userAddress = ""
-        
         getAddressFromLatLon(Latitude: userLatitude, Longitude: userLongitude){ (success, addressString) in
             if success {
                 print("get address called")
