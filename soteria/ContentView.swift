@@ -84,7 +84,9 @@ struct HomeView: View {
                     
                     let targetAddress = addressString.replacingOccurrences(of: " ", with: "%20")
                     
-                    if let url = URL(string: "https://api.whatsapp.com/send/?phone=\( phoneNumber)&text=Help!%20Sender%20Sedang%20Dalam%20Masalah!%20Koordinate%20di%20lat:\(userLatitude)%20long:\(userLongitude)%20Alamat%20di%20\(targetAddress)&type=phone_number&app_absent=0"),
+                    let gmapUrl = "https://maps.google.com/?q=\(userLatitude),\(userLongitude)"
+                    
+                    if let url = URL(string: "https://api.whatsapp.com/send/?phone=\( phoneNumber)&text=Help!%20Sender%20Sedang%20Dalam%20Masalah!%20Koordinate%20di%20Alamat%20di%20\(targetAddress)%20\(gmapUrl)&type=phone_number&app_absent=0"),
                             
                             UIApplication.shared.canOpenURL(url) {
                                UIApplication.shared.open(url, options: [:])
