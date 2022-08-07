@@ -164,7 +164,7 @@ struct ContactView: View {
                         .multilineTextAlignment(.center)
                         .padding(.bottom, 80)
                     TextField(placeholder, text: $destinationNumber)
-                        .background(Color.white)
+                        .background(Color.clear)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .font(.system(size: 16, weight: .semibold, design: .default))
                         .padding(.leading, 20)
