@@ -11,6 +11,7 @@ import MapKit
 
 struct HomeView: View {
     @State private var showingAlert = false
+    @State private var isNumberFormatWrong = false
     @ObservedObject var locationManager = LocationManager()
 
     var userLatitude: Double {
@@ -64,33 +65,47 @@ struct HomeView: View {
         })
     }
     
+    func checkNumber(targetNumber: String) {
+        
+        if(targetNumber.first == "0") {
+            isNumberFormatWrong = true
+        }
+        else{
+            isNumberFormatWrong = false
+        }
+    }
+    
     func sendAlert() {
         
-        getAddressFromLatLon(Latitude: userLatitude, Longitude: userLongitude){ (success, addressString) in
-            if success {
-                print("get address called")
-                print(addressString)
-                //once address is fetched, this will be triggered.
-                let phoneNumber = UserDefaults.standard.string(forKey: "phoneNumber") ?? "0"
-                
-                if (phoneNumber == "0")
-                {
-                    showingAlert = !showingAlert
-                }
-                
-                else{
-                    print("called")
+        checkNumber(targetNumber:UserDefaults.standard.string(forKey: "phoneNumber") ?? "0" )
+        
+        if(!isNumberFormatWrong){
+            getAddressFromLatLon(Latitude: userLatitude, Longitude: userLongitude){ (success, addressString) in
+                if success {
+                    print("get address called")
                     print(addressString)
+                    //once address is fetched, this will be triggered.
+                    let phoneNumber = UserDefaults.standard.string(forKey: "phoneNumber") ?? "0"
                     
-                    let targetAddress = addressString.replacingOccurrences(of: " ", with: "%20")
+                    if (phoneNumber == "0")
+                    {
+                        showingAlert = !showingAlert
+                    }
                     
-                    let gmapUrl = "https://maps.google.com/?q=\(userLatitude),\(userLongitude)"
-                    
-                    if let url = URL(string: "https://api.whatsapp.com/send/?phone=\( phoneNumber)&text=Help!%20Sender%20Sedang%20Dalam%20Masalah!%20Koordinate%20di%20Alamat%20di%20\(targetAddress)%20\(gmapUrl)&type=phone_number&app_absent=0"),
-                            
-                            UIApplication.shared.canOpenURL(url) {
-                               UIApplication.shared.open(url, options: [:])
-                            }
+                    else{
+                        print("called")
+                        print(addressString)
+                        
+                        let targetAddress = addressString.replacingOccurrences(of: " ", with: "%20")
+                        
+                        let gmapUrl = "https://maps.google.com/?q=\(userLatitude),\(userLongitude)"
+                        
+                        if let url = URL(string: "https://api.whatsapp.com/send/?phone=\( phoneNumber)&text=Help!%20Sender%20Sedang%20Dalam%20Masalah!%20Koordinate%20di%20Alamat%20di%20\(targetAddress)%20\(gmapUrl)&type=phone_number&app_absent=0"),
+                                
+                                UIApplication.shared.canOpenURL(url) {
+                                   UIApplication.shared.open(url, options: [:])
+                                }
+                    }
                 }
             }
         }
@@ -122,6 +137,9 @@ struct HomeView: View {
                             }
                     .alert(isPresented: $showingAlert) {
                                 Alert(title: Text("Empty Phone Number"), message: Text("Input your destinated phone number in contact screen"), dismissButton: .default(Text("Close")))
+                            }
+                    .alert(isPresented: $isNumberFormatWrong) {
+                                Alert(title: Text("Wrong Number Format"), message: Text("Make sure you type the right number format "), dismissButton: .default(Text("Close")))
                             }
                 }
             }
